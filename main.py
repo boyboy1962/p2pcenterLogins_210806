@@ -15,10 +15,12 @@ import winsound
 import time
 import math
 import p2pcenter
+import eightPercent
 
-email = "boyboy1962@gmail.com"
-ID = "boyboy1962"
+email = input("이메일을 입력해주세요: ")
+ID = email[0:10]
 PW = input('비밀번호를 입력해주세요: ')
 driver = webdriver.Chrome('C:\chromedriver.exe')
 
 p2pcenter.p2pcenter(driver)
+eightPercent.eight_percent_login(driver, email, PW)
