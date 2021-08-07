@@ -16,11 +16,15 @@ import time
 import math
 import p2pcenter
 import eightPercent
+import people_fund
 
 email = input("이메일을 입력해주세요: ")
 ID = email[0:10]
 PW = input('비밀번호를 입력해주세요: ')
 driver = webdriver.Chrome('C:\chromedriver.exe')
 
-p2pcenter.p2pcenter(driver)
-eightPercent.eight_percent_login(driver, email, PW)
+driver.maximize_window() # 대화면 크기
+
+p2pcenter.p2pcenter(driver)                         # 가장 먼저 로딩하는 P2P 공인정부관리기관
+eightPercent.eight_percent_login(driver, email, PW) # 8퍼센트 로그인
+people_fund.people_fund_login(driver, email, PW)    # 피플펀드 로그인
