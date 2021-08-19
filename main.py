@@ -18,8 +18,8 @@ import p2pcenter
 import eightPercent
 import people_fund
 
-email = input("이메일을 입력해주세요: ")
-ID = email[0:10]
+ID = input("아이디를 입력해주세요: ")
+email = ID + "@gmail.com"
 PW = input('비밀번호를 입력해주세요: ')
 driver = webdriver.Chrome('C:\chromedriver.exe')
 
